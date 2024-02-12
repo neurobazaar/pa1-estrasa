@@ -8,6 +8,10 @@ public class CleanDataset
     public void clean_dataset(String input_dir, String output_dir)
     {
         // TO-DO implement clean dataset logic
+	long start = System.currentTimeMillis();
+
+	long end = System.currentTimeMillis();
+	execution_time = end - start;
     }
 
     public static void main(String[] args)
