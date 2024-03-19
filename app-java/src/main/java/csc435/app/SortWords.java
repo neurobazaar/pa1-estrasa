@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-//import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.TreeMap;
 import java.util.Map;
@@ -22,7 +21,6 @@ public class SortWords
 
     public void sort_words(String input_dir, String output_dir)
     {
-        // TO-DO implement sort words logic
 		Path in_dir = Paths.get(input_dir);
 		
 		if (!Files.exists(in_dir)) {
@@ -55,7 +53,6 @@ public class SortWords
 					while (nextChar  != -1) {
 						while((nextChar>=97&&nextChar<=122)||(nextChar>=65&&nextChar<=90)||(nextChar>=48&&nextChar<=57)){
 							word+=Character.toString(nextChar);
-							//this.dataset_size+=2;
 							nextChar =  reader.read();
 						}
 						nextChar =  reader.read();
@@ -72,10 +69,8 @@ public class SortWords
 					
 					reader.close();
 				} catch (FileNotFoundException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 
@@ -96,7 +91,6 @@ public class SortWords
 					}
 					writer.close();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
