@@ -10,7 +10,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
-//import java.util.Scanner;
 
 public class CountWords
 {
@@ -19,7 +18,6 @@ public class CountWords
 
     public void count_words(String input_dir, String output_dir)
     {
-        // TO-DO implement count words logic
 		Path in_dir = Paths.get(input_dir);
 		
 		if (!Files.exists(in_dir)) {
@@ -52,7 +50,6 @@ public class CountWords
 						this.dataset_size+=2;
 						while((nextChar>=97&&nextChar<=122)||(nextChar>=65&&nextChar<=90)||(nextChar>=48&&nextChar<=57)){
 							word+=Character.toString(nextChar);
-							//this.dataset_size+=2;
 							nextChar =  reader.read();
 						}
 						if (wordList.containsKey(word)){
@@ -72,10 +69,8 @@ public class CountWords
 					}
 					writer.close();
 				} catch (FileNotFoundException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				
